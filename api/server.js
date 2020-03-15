@@ -1,8 +1,8 @@
 const app = require('./src/app');
 const { port } = require('./config/config');
 
-//require('./config/mongodb');
+require('./config/mongodb');
 
 app.listen(port, () => {
-    console.log(`Backend is listening on port ${port}!`);
+    console.log(`Server is listening on port ${port}!`);
 });
