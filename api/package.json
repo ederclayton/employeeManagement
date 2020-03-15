@@ -1,0 +1,25 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "System for employee management.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ederclayton/employeeManagement.git"
+  },
+  "author": "Eder Clayton <eder.comp.uece@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ederclayton/employeeManagement/issues"
+  },
+  "homepage": "https://github.com/ederclayton/employeeManagement#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}
