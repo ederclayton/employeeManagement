@@ -1,0 +1,31 @@
+version: "3"
+services:
+  backend:
+    container_name: backend 
+    build: 
+      context: ./api
+    depends_on:
+      - db  
+    volumes:
+      - ./api:/usr/app
+      - /usr/app/node_modules
+    environment:  
+      - MONGO_URL=mongodb://db:27017/EmployeeManagement
+      - JWT_SECRET=leads2b
+      - APP_PORT=3000
+    ports: ['3000:3000']
+  db:
+    container_name: db
+    image: mongo:4.0
+    restart: always
+  frontend:
+    container_name: frontend
+    build:
+      context: ./client
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+    ports:
+      - '8080:8080'
+    environment:  
+      - BACKEND_URL=http://localhost:3000/

@@ -1,9 +1,5 @@
-const dotenv = require('dotenv');
-
-dotenv.config();
-
 module.exports = {
-  mongodbUri: process.env.DATABASE_URI,
-  port: process.env.PORT,
-  jwtSecret: process.env.JWT_SECRET
+  mongodbUri: process.env.MONGO_URL ? process.env.MONGO_URL : 'mongodb://localhost:27017/EmployeeManagement',
+  port: process.env.PORT ? process.env.PORT : 3000,
+  jwtSecret: process.env.JWT_SECRET ? process.env.JWT_SECRET : 'leads2b'
 };
